@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+#main .content img {
+	width: 300px;
+	height: 210px;
+	vertical-align: middle;
+	float: left;
+}
+#main .content h2 {
+	/*margin-left: 15px;*/
+	padding-left: 15px;
+	float: left;
+	width: 465px;
+	height: 30px;
+}
+#main .content h2 a {
+	color: #333;
+	font-size: 30px;
+	font-family: "楷体";
+	display: block;
+	/*超出隐藏 变省略号*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#main .article {
+	float: left;
+	/*margin-left: 15px;*/
+	padding-top: 15px;
+	padding-left: 15px;
+	width: 465px;
+	height: 128px;
+	color: #666;
+	font-family: "楷体";
+	font-size: 18px;
+	/*超出隐藏 变省略号*/
+	overflow: hidden;
+}
+#main .other {
+	display: block;
+	float: left;
+	padding-top: 15px;
+	padding-left: 15px;
+	overflow: hidden;
+	width: 442px;
+	height: 28px;
+}
+#main .other span {
+	padding-left: 15px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #666;
+}
+#main .counter a{
+	color: #31B0D5;
+}
+#main .classify a{
+	color: #31B0D5;
+}
+
+

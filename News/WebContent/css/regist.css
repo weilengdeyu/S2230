@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+#regist {
+	width: 380px;
+	position: absolute;
+	left: 50%;
+	margin-left: -210px;
+	background: url(../img/bj-bak.png);
+	padding: 40px;
+	border-radius: 10px;
+	top: 50%;
+	margin-top: -265px;
+}
+#regist h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.username,
+.password,
+.ispassword {
+	width: 260px;
+	height: 30px;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #666;
+	line-height: 30px;
+}
+.verifycode {
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #666;
+	line-height: 30px;
+}
+.note {
+	list-style: none;
+	resize : none;
+	border-radius: 5px;
+	outline: none;
+}
+.btsubmit {
+	margin-top: 15px;
+	display: inline-block;
+    padding: 6px 25px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    
+	color: #fff;
+    background-color: #666;
+    border-color: #999;
+}
+.red {
+	color: red;
+	font-size: 5px;
+}
+#regist tr{
+	width: 380px;
+	overflow: hidden;
+}

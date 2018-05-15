@@ -1,0 +1,18 @@
+@charset "utf-8";
+#main .center {
+	width: 820px;
+	margin-top: 20px;
+	border-radius: 10px;
+	background: url(../img/wenliku.com-240-sos.png);
+}
+#main .center a {
+	display: block;
+	text-align: center;
+	color: #333;
+}
+#main .center p {
+	font-family: "楷体";
+	font-size: 20px;
+	/*margin: 15px 25px 15px 25px;*/
+	padding: 20px;
+}

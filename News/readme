@@ -1,0 +1,60 @@
+新闻发布系统
+1.在WebContent中加入我们网站的资源文件
+2.构建分层
+  entity
+  dao
+    impl
+  service 
+    impl
+  web
+    
+3.数据库 数据表
+  create database news;
+  create table news_UserInfo
+  (
+    uid int auto_increment primary key not null,
+    uname varchar(32) not null,
+    upwd varchar(32) not null
+  );
+  
+  create table news_Info
+  (
+    nid int auto_increment primary key not null,
+    
+  );
+ ------------------------------------------------------
+ Day02
+ 1.关于验证码？
+   验证码不是一张图片，那么底层是通过什么原理（）
+    1. 随机数  0-9 4位数字
+		      字母+数字
+		     汉字
+    2.干扰线（噪音线） 防止机器识别验证码中的内容   无规则，通过算法
+    
+    3.字体大小和字体颜色
+    
+    4.最终生成的一张图片，代码构建画布（Graphics）和画笔 Pen  内存中图片 GDI+
+    response.响应回浏览器
+ 2. dbutils sql----->泛型集合 ---->反射 
+ 
+ 
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
