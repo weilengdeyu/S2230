@@ -2,8 +2,8 @@
 <%@page import="cn.news.entity.UserInfo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,17 +109,22 @@ table {
 				name="despage" value="${pageUtil.pageIndex==1?" ":pageUtil.pageIndex}"/>
 			<input id="direction" type="button" value="跳转" /><label>【${pageUtil.pageIndex}/${ pageUtil.totalPages}页】</label>
 		</div>
-
-	</div>
-	<script type="text/javascript">
-		function delUser(id) {
-			var r = confirm("是否删除");
-			if (r == true) {
-				// x="你按下了\"确定\"按钮!";
-				location.href = "${pageContext.request.contextPath }/deleteUserOne?id="
-						+ id;
-			} else {
-				//x="你按下了\"取消\"按钮!";
+		<script type="text/javascript">
+			
+			function delUser(id) {
+				var r=confirm("是否删除");
+				if (r==true)
+				{
+				   // x="你按下了\"确定\"按钮!";
+				    location.href = "${pageContext.request.contextPath }/deleteUserOne?id="+id;
+				}
+				else
+				{
+				    //x="你按下了\"取消\"按钮!";
+				}
+			}
+			function upUser(id) {
+				location.href = "${pageContext.request.contextPath }/admin/update-info.jsp?id="+id;
 			}
 		}
 		function upUser(id) {
