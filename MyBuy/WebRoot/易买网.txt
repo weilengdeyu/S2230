@@ -1,0 +1,206 @@
+1.项目周期  ：2周
+2.项目分组：9个小组
+   人员构成：
+   
+前端功能块   
+01.登陆外加验证码 （集成完毕） 
+02.注册
+   两点：Ajax判定用户名已经被注册
+-----------------------------------------------
+03.前台首页
+   顶部导航栏和左侧导航栏的一级和二级分类（有兴趣的同志们可以做成无限级分类）
+04.默认情况下对所有商品进行分页
+   点击左侧的某一个分类，对分类的商品进行分页
+-----------------------------------------------
+05.新闻动态加载
+06.商品最近浏览
+   数据cookie  商品编号
+-----------------------------------------------
+07.商品详情
+    **鼠标悬停局部放大
+08.单项购买和加入购物车
+    购物车中数据放入到session中
+    修改数量使用Ajax
+------------------------------------------------
+09.前台留言
+10.支付模块（模拟支付宝支付环境，选作）
+------------------------------------------------
+    Cart
+
+    List<CartItem>
+
+    class CartItem{
+      public Product pro;
+      puiblic int number;
+    }
+    if(){
+            
+    }
+09.后台首页：EasyUI
+10.后台功能
+   用户管理
+   新闻管理
+   评论管理
+   商品管理
+   分类管理（★）
+   订单管理（★）
+  *多条件查询带分页（★★★★★）
+   
+     src中修改：
+       servlet中添加  UserServlet:
+              
+   
+     jsp中的修改
+     
+     
+     js
+ 
+ 
+3.服务器端架构搭建
+   svn的设置和数据库的设置，组员的代码每天要提交到组长电脑的svn服务器上。组长必须给出
+   组员明确的连接地址，组员提交前一定要先备份。
+         例如:url为：
+         http://happy-server/svn/happy-server
+    内置用户：happy
+            密码:happy
+4.架构搭建思路
+  cn.group01.easybuy.entity
+     BaseDao共用
+    到方法级别通过后缀名区分例如获取产品表中记录总数  ：getRowsCount_R1()
+  cn.group01.easybuy.dao  
+  cn.group01.easybuy.biz
+  cn.group01.easybuy.util
+  cn.group01.easybuy.web
+  5.数据库用同一个
+     iP：192.168.8.88
+  6.错误页面的定制
+    Ajax
+    付款接口：json
+   登录弹出框
+   Juqery  Layer 
+ 
+ 7.
+ JavaScript Code
+<script type="text/javascript">  
+  
+$(document).ready(function() {  
+  
+    //Default Action  
+    $(".tab_content").hide(); //Hide all content  
+    $("ul.tabs li:first").addClass("active").show(); //Activate first tab  
+    $(".tab_content:first").show(); //Show first tab content  
+      
+    //On Click Event  
+    $("ul.tabs li").click(function() {  
+        $("ul.tabs li").removeClass("active"); //Remove any "active" class  
+        $(this).addClass("active"); //Add "active" class to selected tab  
+        $(".tab_content").hide(); //Hide all tab content  
+        var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content  
+        $(activeTab).fadeIn(); //Fade in the active content  
+        return false;  
+    });  
+  
+});  
+</script>  
+主要代码
+ 
+XML/HTML Code
+<div class="container">  
+      
+    <ul class="tabs">  
+        <li class="active"><a href="#tab1">导航菜单</a></li>  
+        <li><a href="#tab4">TAB标签</a></li>  
+    </ul>  
+    <div class="tab_container">  
+        <div id="tab1" class="tab_content" style="display: block; ">  
+             
+          <h3><a href="http://www.freejs.net/article_daohangcaidan_13.html">jquery css多级下拉菜单</a></h3>  
+            <p id="">多级菜单，理论上支持无限多的层级，文件结构非常简单的，具体的请看下面的内容</p>  
+        </div>  
+          
+        <div id="tab4" class="tab_content" style="display: none; ">  
+            <h2>各种tab标签选项卡</h2>  
+            <h3><a href="http://www.freejs.net/article_tabbiaoqian_17.html">tab标签页面,ajax载入</a></h3>  
+              
+            <p> tab标签，jquery ajax载入数据库的内容</p>  
+        </div>  
+    </div>  
+  
+</div>  
+  
+  
+  
+ 在真正的购买操作中，用户肯定是推着购物车跑。
+ 现在我就在entity包下创建一个名称为Cart的类，和生活中你推的购物车对应
+  Cart：10包方便面
+	     20双袜子
+	     30条内裤
+  Map<String,CartItem>
+    
+  
+  
+  
+  /** 
+     * 格式化string为Date 
+     * @param datestr 
+     * @return date 
+     */ 
+    private static Date parseDate(String datestr) {  
+        if (null == datestr || "".equals(datestr)) {  
+            return null;  
+        }  
+        try {  
+            String fmtstr = null;  
+            if (datestr.indexOf(':') > 0) {  
+                fmtstr = "yyyy-MM-dd HH:mm:ss";  
+            } else {  
+                fmtstr = "yyyy-MM-dd";  
+            }  
+            SimpleDateFormat sdf = new SimpleDateFormat(fmtstr, Locale.UK);  
+            return sdf.parse(datestr);  
+        } catch (Exception e) {  
+            return null;  
+        }  
+    }  
+    /** 
+     * 日期转化为String 
+     * @param date 
+     * @return date string 
+     */ 
+    private static String fmtDate(Date date) {  
+        if (null == date) {  
+            return null;  
+        }  
+        try {  
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);  
+            return sdf.format(date);  
+        } catch (Exception e) {  
+            return null;  
+        }  
+    }
+  
+  
+  --错误页的定制
+  easyui
+  注册ajax
+ 专业的文档pdf，从需求分析，用例图  
+ ppt：有新技术
+ 
+		//设置缓存为空   
+	
+        <%
+		//设置缓存为空   
+	
+        response.setHeader("Cache-Control", "no-store");
+        response.setDateHeader("Expires", 0);
+        response.setHeader("Pragma", "no-cache");	
+	    %>
+  
+  
+  
+  
+  
+  
+  
+                
+        

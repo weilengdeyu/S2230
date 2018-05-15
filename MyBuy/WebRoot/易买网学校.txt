@@ -1,0 +1,152 @@
+易买网思路：
+01.login.jsp
+ 难点：1.验证码
+     机制：为了防止浏览器读取缓存中的验证码图片，那么首先在形成验证码的Servlet处理程序中
+	 设置浏览器不缓存，第二种手段就是给请求的Servlet加一个随机数，这样就保证每次都从服务器
+	 拿一张验证码图片
+	 2. 验证的时候先进行验证码的校验，如果发现验证码不匹配， 就不用再验证用户名和密码，这样
+	 就省去了和数据库的一次交互。
+易买网项目笔记
+1.登录验证码问题
+   问题：点击“看不清，换一张”重读验证码解决方案
+   解析：为了防止浏览器读取缓存中的上一张验证码，需要在<a href="javascript:void(0)" onclick="reloadCode()">看不清</a>中添加如下代码
+    document.getElementById('safeCode').src='Number.jsp?code='+Math.random();
+    也就是通过js给img标签的src属性赋值。另外如果将href="#"会出现问题，但是不写href，又没有pointer的效果，所以
+    通过以上 href="javascript:void(0)" 方案处理。
+2.js引入问题
+  详见word
+3.html资源引入
+  先引入page指令，再修改编码方式，否则会出现乱码
+4.EL表达式获取项目名称：
+${pageContext.request.contextPath}
+EL表达式显示页码条
+<li>
+	<c:forEach  begin="${list.listbegin}" end="${list.listened}" var="i" varStatus="status">
+       <c:choose>
+       <c:when test="${list.currentPage eq status.index}">
+          <span>[${i}]</span>
+       </c:when>
+       <c:otherwise>
+           <span><a href="${pageContext.request.contextPath}/Home?PageIndex=${i}">${i}</a></span>
+       </c:otherwise>
+    </c:choose>
+    </c:forEach>
+ </li>
+  5.http://localhost:8080/MyBuy/ProductDetails?id=591商品详请问题
+  <c:if test="${fn:length('${pro.description}')<=20}">
+			${pro.description}<br />
+			</c:if>
+       通过fn判定字符串长度
+      商品详情超过20汉字省略号代替
+      ${fn:substring(m.content,0,20) }........    
+  6.订单状态
+	Pending - 未处理，当有客户下单后，订单状态一般为“Pending”
+	Processing - 处理中，当确认款项后，订单状态可以设置为“Processing”。
+	Shipped - 已发出，当货物发送出去后，订单状态可以设置为“Shipped”。
+	Complete - 订单完成，如果订单已到达目的地，订单状态可以设置为“Complete”。
+	Refunded - 已退款，如果货物已退回并且已给客户退款，订单状态可以设置为“Refunded”。
+	Cancelled - 取消订单，如果货物在发送前客户取消订单，订单状态可以设置为“Cancelled”。
+	7.待扩充内容，用户的送货地址单开一张表
+		 现在送货地址默认读取用户的注册地址
+		 当用户结账后更改订单的状态。
+	8.左侧分类栏和导航菜单栏可以使用拦截器。
+	9.购物车流程
+	购物车当中的商品条目信息是保存到Session中的。
+	Session相当于一次会话，也就是任何一个用户登陆了该网站，都会持有一个购物车对象。该购物车就是放到Session对象中来处理的。
+	Session[cartUserName]=new Cart();
+	Map集合：保存了一个一个的商品条目
+	key:当前商品编号
+	value:CartItem:Product对象  数量
+  
+10.最近浏览
+Cookie中写入数据
+325   2  
+if()
+
+
+1     1
+
+1    2
+if(不包含){
+  if(>=3){
+    removeLast()
+       
+  }else{
+    
+  }
+}
+remove(1)
+
+addFirst(1)
+LinkedList:123
+
+
+1_2_3
+if(){
+
+}
+--问题1：在html页面中，设置<meta http-equiv="Content-Type" content="text/html; charset=gbk">可以控制浏览器软件的编码行为，
+但是如果换成了jsp页面，则不可以。
+
+
+1.关于${pageContext.request.contextPath}和<%=request.getContextPath()%>
+解析：两者在jsp页面中的效果都是获取项目的名称，格式为/mybuy
+
+2.解决js报错问题
+解决Cannot return from outside a function or method报的错。
+法一：在MyEclipse菜单栏window --->preferences --->myeclipse --->validation 
+--->javascript validator for Js files 把Bulid 复选框的勾去掉 就可以了
+
+支付宝：
+网关参数说明：
+partner：商户编号    1   --
+return_url：回调商户地址（通过商户网站的哪个页面来通知支付成功！）1  --  
+subject：商品名称
+body：商品描述
+out_trade_no：订单号！！！(由商户网站生成，支付宝不确保正确性，只负责转发。)
+total_fee：总金额
+seller_email：卖家邮箱1--
+sign：数字签名。为按顺序连接     总金额、 商户编号、订单号、商品名称、商户密钥的MD5值。(小写值)
+支付时,请将上述参数以get形式传给接入地址.
+
+key:密钥    --
+
+payGateUrl：支付地址 1
+
+支付结果返回给 return_url 指定的网址.传回的参数如下:
+
+回调商户接口地址参数说明：
+out_trade_no：订单号。给PayGate.ashx传过去的out_trade_no再传回来
+returncode：返回码，字符串。ok为支付成功，error为支付失败。
+total_fee：支付金额
+sign：数字签名。为按顺序连接 订单号、返回码、支付金额、商户密钥为新字符串的MD5值。
+
+测试商户名称：微冷的雨；商户编号：1、商户密钥：hapy$
+（每个商户的密钥是商户自己设置的，每个人的都不一样，只有支付宝和商户知道，所以无法猜测、假冒）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 

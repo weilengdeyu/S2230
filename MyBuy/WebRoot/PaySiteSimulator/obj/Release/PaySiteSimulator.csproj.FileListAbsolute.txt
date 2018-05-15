@@ -1,0 +1,5 @@
+D:\我的文档\MyCode\codeplex\rupeng\RuPengSite\RuPengSiteSln2（三层架构）\PaySiteSimulator\bin\PaySiteSimulator.dll
+D:\我的文档\MyCode\codeplex\rupeng\RuPengSite\RuPengSiteSln2（三层架构）\PaySiteSimulator\bin\PaySiteSimulator.pdb
+D:\我的文档\MyCode\codeplex\rupeng\RuPengSite\RuPengSiteSln2（三层架构）\PaySiteSimulator\obj\Release\ResolveAssemblyReference.cache
+D:\我的文档\MyCode\codeplex\rupeng\RuPengSite\RuPengSiteSln2（三层架构）\PaySiteSimulator\obj\Release\PaySiteSimulator.dll
+D:\我的文档\MyCode\codeplex\rupeng\RuPengSite\RuPengSiteSln2（三层架构）\PaySiteSimulator\obj\Release\PaySiteSimulator.pdb

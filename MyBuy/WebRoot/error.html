@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0068)http://zhan.renren.com/codefans?gid=3602888497994502358&checked=true -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>人人小站</title>
+<meta name="Description" content="人人网 校内是一个真实的社交网络，联络你和你周围的朋友。 加入人人网校内你可以:联络朋友，了解他们的最新动态；和朋友分享相片、音乐和电影；找到老同学，结识新朋友；用照片和日志记录生活,展示自我。">
+<meta name="Keywords" content="Xiaonei,Renren,校内,大学,同学,同事,白领,个人主页,博客,相册,群组,社区,交友,聊天,音乐,视频,校园,人人,人人网">
+<link rel="shortcut icon" type="image/x-icon" href="http://a.xnimg.cn/smallsite/images/ico.png">
+<link href="http://s.xnimg.cn/a51806/smallsite/styles/base-all-min.css" rel="stylesheet">
+<link href="http://s.xnimg.cn/a51806/smallsite/styles/home_alone-all-min.css" rel="stylesheet">
+<link href="http://s.xnimg.cn/a67485/smallsite/styles/home-new-all-min.css" rel="stylesheet">
+<script type="text/javascript">
+jQuery(function(){
+var outOfBoxTimer =null ;
+var outOfMarkTimer =null ;
+var outOfBoxTime =0,outOfMarkTime=0,rdId=0 ;
+jQuery('.menubox').live('mouseover',function(){
+jQuery('.settingspop').hide();
+if(outOfMarkTimer){
+clearTimeout(outOfMarkTimer);
+}
+if(outOfBoxTimer){
+clearTimeout(outOfBoxTimer);
+}
+if(outOfBoxTime&&(new Date().getTime()-outOfBoxTime)<=500&&rdId==jQuery(this).attr('rdId')){
+return;
+}
+var obj = jQuery(this);
+rdId=Math.random()+'';
+obj.attr('rdId',rdId);
+jQuery('.bar-menulist').unbind();
+jQuery('.bar-menulist').hover(function(){
+if((new Date().getTime()-outOfMarkTime)<=500){
+clearTimeout(outOfBoxTimer);
+}
+},function(){
+var That=this;
+outOfBoxTime=new Date().getTime();
+outOfMarkTimer=setTimeout(function(){jQuery(That).hide();},500);
+});
+jQuery('.bar-menulist').show();
+}).live('mouseout',function(){
+outOfMarkTime=new Date().getTime();
+outOfBoxTimer=setTimeout(function(){jQuery('.bar-menulist').hide();},500);
+});     
+})       
+</script>
+<style type="text/css">
+body{background:url('http://a.xnimg.cn/smallsite/images/home-new/404-bg.jpg') no-repeat #01a8ac center 40px;}
+</style>
+<script>
+SmallSite.data =false ;
+var CURSITE = {id:'', location:'',name:'', head:'',url:'',isSyncTotal:true,gid:'0',syncSina:false,syncRenren:false,syncDouban:false,syncQqweibo:false,showBindBubble:false};
+</script>
+</head>
+<body class="body-404"><div id="jsContainer"></div>
+<div id="publishbar"><div class="barpanel">
+<div id="logo"> <a href="http://zhan.renren.com/home"><img src="./人人小站_files/bar-logo.png" alt="人人小站"></a> </div>
+<div class="tools">
+<a class="bar-home menu-list" href="http://zhan.renren.com/home?from=bar" title="首页">首页</a>
+<a class="bar-btn-reg menu-list" href="http://zhan.renren.com/loginall?from=bar">注册</a>
+<a class="bar-btn-login menu-list" href="http://zhan.renren.com/login?from=bar">登录</a>
+<span style="display:none">
+<script language="javascript" type="text/javascript" src="./人人小站_files/14879491.js"></script><a href="http://www.51.la/?14879491" target="_blank"><img alt="51.la 专业、免费、强健的访问统计" src="./人人小站_files/icon_9.gif" style="border:none"></a>
+
+<noscript>&lt;a href="http://www.51.la/?14879491" target="_blank"&gt;&lt;img alt="&amp;#x6211;&amp;#x8981;&amp;#x5566;&amp;#x514D;&amp;#x8D39;&amp;#x7EDF;&amp;#x8BA1;" src="http://img.users.51.la/14879491.asp" style="border:none" /&gt;&lt;/a&gt;</noscript>
+</span>
+</div></div>
+</div>
+<div class="text-404" style=""><img src="./人人小站_files/404-text.png" style="">
+</div>
+<div class="bar-404">
+<a class="back-404" href="http://zhan.renren.com/home?from=404page" style="">返回首页</a>
+<a class="search-404" href="http://zhan.renren.com/explore?from=404page" style="">探索一下</a>
+</div>
+
+<div class="gotop" style="display:none;">								<a href="javascript:;" class="" title="回到顶部" alt="回到顶部">回到顶部</a>						</div></body></html>

@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//WebRoot/guestbook.jsp=UTF-8
+encoding//WebRoot/js2/jquery.js=gb2312
+encoding//WebRoot/login.jsp=UTF-8
+encoding//WebRoot/manager/guestbook-modify.jsp=UTF-8
+encoding//WebRoot/manager/guestbook.jsp=UTF-8
+encoding//WebRoot/manager/index.jsp=UTF-8
+encoding//WebRoot/manager/news-add.jsp=UTF-8
+encoding//WebRoot/manager/news-modify.jsp=UTF-8
+encoding//WebRoot/manager/news.jsp=UTF-8
+encoding//WebRoot/manager/order.jsp=UTF-8
+encoding//WebRoot/manager/user.jsp=UTF-8
+encoding//WebRoot/reg-result.jsp=UTF-8
+encoding//WebRoot/register.jsp=UTF-8
+encoding//WebRoot/shopping.jsp=UTF-8
+encoding/<project>=UTF-8

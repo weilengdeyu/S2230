@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Num</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.Num</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.Home</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LeftBar</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.LeftBar</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProductDetails</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.ProductDetails</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Buying</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.Buying</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Account</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.Account</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.CartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddNumber</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.AddNumber</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserDel</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.UserDel</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PayServlet</servlet-name>
+    <servlet-class>cn.weilengdeyu.easybuy.web.PayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Num</servlet-name>
+    <url-pattern>/Num</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeftBar</servlet-name>
+    <url-pattern>/LeftBar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProductDetails</servlet-name>
+    <url-pattern>/ProductDetails</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Buying</servlet-name>
+    <url-pattern>/Buying</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Account</servlet-name>
+    <url-pattern>/Account</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/CartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddNumber</servlet-name>
+    <url-pattern>/AddNumber</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserDel</servlet-name>
+    <url-pattern>/UserDel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayServlet</servlet-name>
+    <url-pattern>/PayServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

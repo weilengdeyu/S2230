@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Y2161-0728作业</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+     <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap-theme.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css" type="text/css"></link>
+ <script type="text/javascript" src="../scripts/jquery-1.11.1.min.js"></script>
+   <script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+   <div class="container">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">第一节作业</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">第二节作业</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">第三节作业</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">第四节作业</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+	      <div class="row">
+			  <div class="col-md-7"> <img src="image/3.jpg" width="300px" height="300px"/></div>
+			  <div class="col-md-5"> 1.Oracle版本中的i，g，c含义
+			                         2.三种Oracle内置的用户
+			                           sys  orcl  不能用normal身份登录
+			                           system orcl
+			                           scott tiger
+			                         3.如何开启Oracle服务
+			                                                               监听和数据库
+			                                                                
+			                         4.解锁被锁定的用户
+			                         alter user scott account unlock
+			                         5.Oracle目录
+			                            oradata
+			                            product
+			                            
+			                         
+			  </div>
+		  </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+          <div class="row">
+			  <div class="col-md-7"> <img src="image/4.jpg" width="300px" height="300px"/></div>
+			  <div class="col-md-5"> 第二节：
+			             以system登录的
+			             1.如何创建用户
+			               create user happy indentified by 1;
+			             2。给用户授权
+			               grant connect,resource to happy
+			             3.用 happy 登录建立自己的表
+			             4.序列是用来生成一个从1开始的自增列。
+			                SEQ_NUM.nexval  下一个值
+			             5.Oracle默认的事务隔离级别是读已提交  Read-Commited
+			  </div>
+		  </div>     
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">
+          <div class="row">
+			  <div class="col-md-7"> <img src="image/5.jpg" width="300px" height="300px"/></div>
+			  <div class="col-md-5"> 第3节
+			       1.两种连接Oracle服务器的方式
+			          SQL/PLUS工具
+			                         命令行下输入 sqlplus username/pwd@DBName  有N个数据库
+			           sqlplus username/pwd  只有一个数据库
+			          PL/SQL Developer工具
+			       2.解锁用户
+			       3.连接远程的Oracle的写法
+			       4.作业：可以让任何一个人，一条狗可以连接你的Oracle。
+			       5.Oracle主键第三个选项卡中自己手动添加
+			       6.Oracle数据库本质上就是Socket服务器，而SQLPLUS和PL/SQLDeveloper都是客户端
+			       
+			  </div>
+		  </div> 
+    
+    </div>
+    <div role="tabpanel" class="tab-pane" id="settings">
+          <div class="row">
+			  <div class="col-md-7"> <img src="image/2.jpg" width="300px" height="300px"/></div>
+			  <div class="col-md-5"> 第4章</div>
+		  </div> 
+    </div>
+  </div>
+
+</div>
+    
+  </body>
+</html>
